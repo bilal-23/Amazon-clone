@@ -1,14 +1,10 @@
 import Head from 'next/head';
+import Header from '../components/header';
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Amazon</title>
-      </Head>
-      <div className="text-8xl">
-        Hello
-      </div>
+      <Header />
     </>
   )
 }
