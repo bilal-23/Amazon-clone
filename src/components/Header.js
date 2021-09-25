@@ -3,11 +3,11 @@ import { MenuIcon, SearchIcon, ShoppingCartIcon } from '@heroicons/react/outline
 
 export default function Header() {
     return (
-        <header>
+        <header className="sticky top-0 ">
             {/* top nav */}
             <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
-                <div className="m-2 flex items-center flex-grow sm:flex-grow-0">
-                    <Image src="https://links.papareact.com/f90" width={150} height={40} objectFit="contain" className="cursor-pointer" />
+                <div className="m-2 flex items-center flex-grow sm:flex-grow-0 relative top-2 ">
+                    <Image src="https://links.papareact.com/f90" width={150} height={40} objectFit="contain" className="cursor-pointer md:w-40 w-52" />
                 </div>
 
                 {/* Search  */}
@@ -17,24 +17,24 @@ export default function Header() {
                 </div>
 
                 {/* Right */}
-                <div className="text-white flex text-sm items-center space-x-6 mx-6 whitespace-nowrap">
+                <div className="text-white flex text-md items-center space-x-6 mx-6 whitespace-nowrap">
                     <div className="cursor-pointer hover:underline">
                         <p>Hello, Bilal</p>
-                        <p className="font-bold md:text-base">Accounts &amp; Lists</p>
+                        <p className="font-extrabold md:text-base">Accounts &amp; Lists</p>
                     </div>
                     <div className="cursor-pointer hover:underline">
                         <p>Returns</p>
-                        <p className="font-bold md:text-base">&amp; Orders</p>
+                        <p className="font-extrabold md:text-base">&amp; Orders</p>
                     </div>
                     <div className="relative flex items-center cursor-pointer hover:underline">
-                        <span className="absolute font-bold right-0 top-0 md:right-6 h-4 w-4 bg-yellow-400 text-center rounded-full text-black text-xs ">1</span>
+                        <span className="absolute font-extrabold right-0 top-0 md:right-6 h-4 w-4 bg-yellow-400 text-center rounded-full text-black text-xs ">1</span>
                         <ShoppingCartIcon className="h-10" />
-                        <p className="font-bold hidden md:inline md:text-base mt-2">Cart</p>
+                        <p className="font-extrabold hidden md:inline md:text-base mt-2">Cart</p>
                     </div>
                 </div>
             </div>
             {/* Bottom Nav  */}
-            <div className="flex space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm">
+            <div className="flex space-x-3 p-2 pl-6 bg-amazon_blue-light text-white md:text-sm text-xs">
                 <p className="bottom-nav-item">
                     <MenuIcon className="h-6 mr-1" />
                     All
