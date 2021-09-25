@@ -3,7 +3,7 @@ import { MenuIcon, SearchIcon, ShoppingCartIcon } from '@heroicons/react/outline
 
 export default function Header() {
     return (
-        <header className="sticky top-0 ">
+        <header className="sticky top-0 z-40">
             {/* top nav */}
             <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
                 <div className="m-2 flex items-center flex-grow sm:flex-grow-0 relative top-2 ">
