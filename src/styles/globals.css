@@ -22,7 +22,8 @@
     border: none;
     transition: 0.3s ease all;
   }
-  .button:active {
+  .button:active,
+  .button:focus {
     transform: scale(1.03);
     outline: none;
     border: none;
