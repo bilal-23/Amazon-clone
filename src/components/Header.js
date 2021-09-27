@@ -1,16 +1,19 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { MenuIcon, SearchIcon, ShoppingCartIcon } from '@heroicons/react/outline';
+import { useSelector } from 'react-redux';
 import { signIn, signOut, useSession } from 'next-auth/client';
 
 export default function Header() {
     const [session] = useSession();
+    const itemsQuantity = useSelector(state => state.basket.quantity);
 
     return (
         <header className="sticky top-0 z-40">
             {/* top nav */}
             <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
-                <div className="m-2 flex items-center flex-grow sm:flex-grow-0 relative top-2 ">
-                    <Image src="https://links.papareact.com/f90" width={150} height={40} objectFit="contain" className="cursor-pointer md:w-40 w-52" />
+                <div className="m-0 flex items-center flex-grow sm:flex-grow-0 relative top-2 ">
+                    <Link href="/"><a><Image src="https://links.papareact.com/f90" width={150} height={40} objectFit="contain" className="cursor-pointer md:w-40 w-52" /></a></Link>
                 </div>
 
                 {/* Search  */}
@@ -29,11 +32,16 @@ export default function Header() {
                         <p>Returns</p>
                         <p className="font-extrabold md:text-base">&amp; Orders</p>
                     </div>
-                    <div className="relative flex items-center cursor-pointer hover:underline">
-                        <span className="absolute font-extrabold right-0 top-0 md:right-6 h-4 w-4 bg-yellow-400 text-center rounded-full text-black text-xs ">1</span>
-                        <ShoppingCartIcon className="h-10" />
-                        <p className="font-extrabold hidden md:inline md:text-base mt-2">Cart</p>
+                    <Link href="/checkout"><a> <div className="relative flex items-center cursor-pointer hover:underline">
+                        <span className="absolute font-extrabold right-0 top-0 md:right-6 h-4 w-4 bg-yellow-400 text-center rounded-full text-black text-xs ">{itemsQuantity}</span>
+
+                        <>
+                            <ShoppingCartIcon className="h-10" />
+                            <p className="font-extrabold hidden md:inline md:text-base mt-2">Cart</p>
+                        </>
+
                     </div>
+                    </a></Link>
                 </div>
             </div>
             {/* Bottom Nav  */}

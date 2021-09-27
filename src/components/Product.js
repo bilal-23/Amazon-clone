@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { StarIcon } from '@heroicons/react/solid';
 import NumberFormat from "react-number-format";
 import Fade from 'react-reveal/Fade';
+import { useDispatch } from 'react-redux';
+import { addToBasket } from '../slices/basketSlice';
 
 export default function Product({ id, name, price, description, category, image, company }) {
     const MAX_RATING = 5
@@ -11,6 +13,14 @@ export default function Product({ id, name, price, description, category, image,
         Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
     )
     const [hasPrime] = useState(Math.random() < 0.5);
+    const dispatch = useDispatch();
+
+    const addItemToBasket = () => {
+        const product = {
+            id, name, price, description, category, image, company, quantity: 1
+        }
+        dispatch(addToBasket(product));
+    }
 
     return (
         <Fade bottom>
@@ -40,7 +50,7 @@ export default function Product({ id, name, price, description, category, image,
                     <img src="https://links.papareact.com/fdw" alt="prime" className="w-12" />
                     <p className="text-xs">FREE Next-day Delivery</p>
                 </div>}
-                <button className="mt-auto  button">Add to Cart</button>
+                <button onClick={addItemToBasket} className="mt-auto  button">Add to Cart</button>
             </div>
         </Fade>
     )
