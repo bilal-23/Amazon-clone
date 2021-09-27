@@ -24,8 +24,10 @@
   }
   .button:active,
   .button:focus {
-    transform: scale(1.03);
     outline: none;
     border: none;
+  }
+  .button:active {
+    transform: scale(1.03);
   }
 }
