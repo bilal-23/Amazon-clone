@@ -47,7 +47,7 @@ export default function CheckoutProduct({ item }) {
                     <p className="text-xs">FREE Next-day Delivery</p>
                 </div>}
             </div>
-            <button onClick={removeFromCart} className="button text-sm mt-auto md:col-span-1 col-span-2 md:px-6 rounded-sm mx-auto mt-2">Remove From Basket</button>
+            <button onClick={removeFromCart} className="button text-sm mt-auto md:col-span-1 col-span-2 md:px-6 rounded-sm mx-auto ">Remove From Basket</button>
         </div>
     )
 }
