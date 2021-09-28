@@ -3,10 +3,12 @@ import { useState } from 'react';
 import { StarIcon } from '@heroicons/react/solid';
 import NumberFormat from "react-number-format";
 import Fade from 'react-reveal/Fade';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addToBasket } from '../slices/basketSlice';
 
 export default function Product({ id, name, price, description, category, image, company }) {
+    const items = useSelector(state => state.basket.items);
+    const alreadyInBasket = items?.find(item => item.id === id);
     const MAX_RATING = 5
     const MIN_RATING = 1
     const [rating] = useState(
@@ -17,7 +19,7 @@ export default function Product({ id, name, price, description, category, image,
 
     const addItemToBasket = () => {
         const product = {
-            id, name, price, description, category, image, company, quantity: 1
+            id, name, price, rating, hasPrime, description, category, image, company, quantity: 1
         }
         dispatch(addToBasket(product));
     }
@@ -50,7 +52,8 @@ export default function Product({ id, name, price, description, category, image,
                     <img src="https://links.papareact.com/fdw" alt="prime" className="w-12" />
                     <p className="text-xs">FREE Next-day Delivery</p>
                 </div>}
-                <button onClick={addItemToBasket} className="mt-auto  button">Add to Cart</button>
+                {!alreadyInBasket && <button onClick={addItemToBasket} className="mt-auto  button">Add to Cart</button>}
+                {alreadyInBasket && <button className="mt-auto  button">Product Added</button>}
             </div>
         </Fade>
     )

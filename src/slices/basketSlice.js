@@ -19,7 +19,10 @@ export const basketSlice = createSlice({
         existingItem.quantity = existingItem.quantity + 1;
       }
     },
-    removeFromBasket: (state, action) => { },
+    removeFromBasket: (state, action) => {
+      state.items = state.items.filter(item => item.id !== action.payload);
+      state.quantity--;
+    },
   },
 });
 
