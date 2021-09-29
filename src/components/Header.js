@@ -13,7 +13,7 @@ export default function Header() {
             {/* top nav */}
             <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
                 <div className="m-0 flex items-center flex-grow sm:flex-grow-0 relative top-2 ">
-                    <Link href="/"><a><Image src="https://links.papareact.com/f90" width={150} height={40} objectFit="contain" className="cursor-pointer md:w-40 w-52" /></a></Link>
+                    <Link href="/"><a><Image src="/amazon.png" width={150} height={40} objectFit="contain" className="cursor-pointer md:w-40 w-52" /></a></Link>
                 </div>
 
                 {/* Search  */}
