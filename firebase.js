@@ -8,6 +8,7 @@ import firebase from 'firebase';
 //     messagingSenderId: process.env.MESSAGING_SENDER_ID,
 //     appId: process.env.APP_ID
 // };
+
 const firebaseConfig = {
     apiKey: "AIzaSyA7BVjCkJeb71iBburnPG6HN5sUf49jGgo",
     authDomain: "clone-a9232.firebaseapp.com",
