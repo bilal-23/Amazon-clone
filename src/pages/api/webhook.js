@@ -15,7 +15,6 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const endpointSecret = process.env.STRIPE_SIGNING_SECRET
 
 const fulfillOrder = async (session) => {
-    console.log('fulfilling order', session)
     return app
         .firestore()
         .collection('users')
@@ -29,7 +28,7 @@ const fulfillOrder = async (session) => {
             timestamp: admin.firestore.FieldValue.serverTimestamp(),
         })
         .then(() => {
-            console.log(`SUCCESS ORDER ${session.id} has been added to DB`)
+            // console.log(`SUCCESS ORDER ${session.id} has been added to DB`)
         })
 }
 export default async (req, res) => {

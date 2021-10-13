@@ -30,7 +30,11 @@ export default function Header() {
                     </div>
                     <div className="cursor-pointer hover:underline">
                         <p>Returns</p>
-                        <p className="font-extrabold md:text-base">&amp; Orders</p>
+                        <Link href="/orders">
+                            <a>
+                                <p className="font-extrabold md:text-base">&amp; Orders</p>
+                            </a>
+                        </Link>
                     </div>
                     <Link href="/checkout"><a> <div className="relative flex items-center cursor-pointer hover:underline">
                         <span className="absolute font-extrabold right-0 top-0 md:right-6 h-4 w-4 bg-yellow-400 text-center rounded-full text-black text-xs ">{itemsQuantity}</span>
