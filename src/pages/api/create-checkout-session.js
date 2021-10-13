@@ -26,9 +26,8 @@ export default async function handler(req, res) {
         },
         line_items: transformedItems,
         mode: 'payment',
-        // success_url: `${process.env.HOST}/success`,
-        success_url: 'https://amazon-clone-six-ruby.vercel.app/success',
-        cancel_url: 'https://amazon-clone-six-ruby.vercel.app/error',
+        success_url: `${process.env.HOST}/success`,
+        cancel_url: `${process.env.HOST}/error`,
         metadata: {
             email: email,
             images: JSON.stringify(items.map(item => item.image))
