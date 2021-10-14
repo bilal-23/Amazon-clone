@@ -1,11 +1,26 @@
+# Amazon Clone 🛒
 
-# Amazon Clone
+Amazon site clone made with Next.js. 
 
-Amazon Clone made with Next.js . 
+## Features 💡 
+
+- Add products to cart.
+- Checkout.
+- Multiple Products.
+- Authentication.
+- Stripe Payment
+- Webhook
+
+## Screenshots
+<div style="display: grid; grid-template-columns: 1fr 1fr;">
+  <img src="https://raw.githubusercontent.com/bilal-23/Amazon-clone/master/screenshots/Image-2.png" alt="Home Page" width="100%">
+  <img src="https://raw.githubusercontent.com/bilal-23/Amazon-clone/master/screenshots/Image-1.png" alt="Order Page" width="100%">
+   <img src="https://raw.githubusercontent.com/bilal-23/Amazon-clone/master/screenshots/Image-3.png" alt="Checkout Page" width="100%">
+</div>
 
 ## Getting Started 🚀
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites 📋
 
@@ -23,7 +38,7 @@ From your command line, first clone this repo:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/bilal-23/Amazon-clone
+$ git clone https://github.com/bilal-23/Amazon-clone/
 
 # Go into the repository
 $ cd Amazon-clone
@@ -43,16 +58,21 @@ $ npm install
 # Start development server
 $ npm start
 ```
+
 Once your server has started, go to this url `http://localhost:3000/` and you will see the website running on a Development Server.
 
 
 ## Technologies used 🛠️
 
 - [Webpack](https://webpack.js.org/concepts/) - Static module bundler
-- [ReactJS](https://reactjs.org) - Javascript library
-- [Redux](https://redux.js.org) - App wide state management tool
-- [React-router](https://www.npmjs.com/package/react-router) - Routing tool
-- [Firebase](https://firebase.google.com/docs/auth/) - Authentication
-- [Material UI](https://material-ui.com/) 
-- CSS
+- [Next.js](https://nextjs.org/) - React Framework
+- [Next-Auth](https://next-auth.js.org/) - Authentication for Next.js
+- [Material-UI](https://material-ui.com/) - A Popular React UI Framework
+- [React Redux](https://react-redux.js.org/) - Official React bindings for Redux
+- [Redux Toolkit](https://redux-toolkit.js.org/) - The official, opinionated, batteries-included toolset for efficient Redux development
+- [nprogress](https://www.npmjs.com/package/nprogress) - Slim progress bars for Ajax'y applications. 
+- [Stripe](https://stripe.com/en-in) - Online Payment processing for Internet Business
 
+#### Note-
+
+No Copyrights reseved
